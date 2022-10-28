@@ -12,4 +12,18 @@ public class AppConfig {
 		return "index";
 	}
 
+	@GetMapping({ "/aritmetica-error" })
+	public String aritmeticaError() {
+		int number = 100 / 0;
+		System.out.println(number);
+		return "index";
+	}
+
+	@GetMapping({ "/numero-invalido" })
+	public String numeroInvalido() {
+		int number = Integer.parseInt("hola");
+		System.out.println(number);
+		return "index";
+	}
+
 }
