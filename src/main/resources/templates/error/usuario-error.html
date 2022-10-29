@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<title th:text="${messageError}"></title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+	integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="row">
+			<h3>Error</h3>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 alert alert-danger">
+
+				<span th:text="${messageException}"></span> <br>
+				<span th:text="'Error: ' + ${statusCode} + ', '"></span>
+				<span th:text="${messageError}"></span> <br>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
